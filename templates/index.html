@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNX Project Parser</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .upload-section {
+            padding: 40px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .upload-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input-wrapper input[type="file"] {
+            padding: 12px;
+            border: 2px dashed #667eea;
+            border-radius: 8px;
+            background: #f8f9ff;
+            cursor: pointer;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #667eea;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .results-section {
+            padding: 40px;
+            display: none;
+        }
+
+        .results-section.active {
+            display: block;
+        }
+
+        .project-info {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .project-info h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .project-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-item strong {
+            display: block;
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .info-item span {
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .devices-container {
+            margin-top: 30px;
+        }
+
+        .device-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .device-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .device-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .device-header h3 {
+            margin: 0;
+            font-size: 1.3em;
+        }
+
+        .device-header .toggle {
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+
+        .device-header.expanded .toggle {
+            transform: rotate(180deg);
+        }
+
+        .device-body {
+            padding: 20px;
+            display: none;
+        }
+
+        .device-body.expanded {
+            display: block;
+        }
+
+        .device-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .detail-item {
+            font-size: 0.95em;
+        }
+
+        .detail-item strong {
+            display: block;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .group-addresses-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .group-addresses-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .group-addresses-table th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .group-addresses-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.9em;
+        }
+
+        .group-addresses-table tbody tr:hover {
+            background: #f8f9ff;
+        }
+
+        .group-addresses-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .ga-id {
+            font-weight: 600;
+            color: #667eea;
+            text-align: center;
+            width: 60px;
+        }
+
+        .ga-name {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .ga-type {
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .ga-address {
+            font-family: monospace;
+            font-weight: 600;
+            color: #667eea;
+            text-align: center;
+        }
+
+        .ga-data-type {
+            text-align: center;
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .ga-flags {
+            text-align: center;
+            font-family: monospace;
+            font-size: 0.85em;
+            color: #764ba2;
+        }
+
+        .error {
+            background: #fee;
+            color: #c33;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #c33;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .empty-state-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .json-viewer-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 8px;
+        }
+
+        .json-viewer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .json-viewer-header h3 {
+            color: #667eea;
+            margin: 0;
+        }
+
+        .json-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .json-container {
+            background: #1e1e1e;
+            border-radius: 6px;
+            padding: 20px;
+            max-height: 600px;
+            overflow: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .json-content {
+            color: #d4d4d4;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .json-viewer-section.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔌 KNX Project Parser</h1>
+            <p>Upload and analyze your KNX project files</p>
+        </div>
+
+        <div class="upload-section">
+            <form class="upload-form" id="uploadForm">
+                <div class="form-group">
+                    <label for="file">Select .knxproj File</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="file" name="file" accept=".knxproj" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password (Optional)</label>
+                    <input type="password" id="password" name="password" placeholder="Leave empty if not password protected">
+                </div>
+
+                <div class="form-group">
+                    <label for="language">Language (Optional)</label>
+                    <select id="language" name="language">
+                        <option value="">Default</option>
+                        <option value="de-DE">German (de-DE)</option>
+                        <option value="en-US">English (en-US)</option>
+                        <option value="fr-FR">French (fr-FR)</option>
+                        <option value="es-ES">Spanish (es-ES)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn">Upload and Parse</button>
+            </form>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Parsing KNX project file...</p>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection">
+            <div class="project-info" id="projectInfo"></div>
+            <div class="devices-container" id="devicesContainer"></div>
+            <div class="json-viewer-section hidden" id="jsonViewerSection">
+                <div class="json-viewer-header">
+                    <h3>📄 Full JSON Output</h3>
+                    <div class="json-buttons">
+                        <button class="btn-secondary" onclick="copyJson()">📋 Copy JSON</button>
+                        <button class="btn-secondary" onclick="downloadJson()">💾 Download JSON</button>
+                        <button class="btn-secondary" onclick="toggleJsonViewer()">❌ Hide JSON</button>
+                    </div>
+                </div>
+                <div class="json-container">
+                    <pre class="json-content" id="jsonContent"></pre>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn-secondary" onclick="toggleJsonViewer()" id="showJsonBtn" style="display: none;">📄 Show Full JSON Output</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('uploadForm');
+        const loading = document.getElementById('loading');
+        const resultsSection = document.getElementById('resultsSection');
+        const submitBtn = document.getElementById('submitBtn');
+        const projectInfo = document.getElementById('projectInfo');
+        const devicesContainer = document.getElementById('devicesContainer');
+        const jsonViewerSection = document.getElementById('jsonViewerSection');
+        const jsonContent = document.getElementById('jsonContent');
+        const showJsonBtn = document.getElementById('showJsonBtn');
+        let fullJsonData = null;
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const fileInput = document.getElementById('file');
+
+            if (!fileInput.files[0]) {
+                alert('Please select a file');
+                return;
+            }
+
+            // Show loading, hide results
+            loading.classList.add('active');
+            resultsSection.classList.remove('active');
+            submitBtn.disabled = true;
+            devicesContainer.innerHTML = '';
+            jsonViewerSection.classList.add('hidden');
+            showJsonBtn.style.display = 'none';
+            fullJsonData = null;
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to parse file');
+                }
+
+                // Store full JSON data
+                fullJsonData = data.full_json || data;
+                
+                // Display results
+                displayResults(data);
+
+            } catch (error) {
+                devicesContainer.innerHTML = `<div class="error">Error: ${error.message}</div>`;
+                resultsSection.classList.add('active');
+            } finally {
+                loading.classList.remove('active');
+                submitBtn.disabled = false;
+            }
+        });
+
+        function displayResults(data) {
+            // Display project info
+            const info = data.project_info;
+            const savedFileMsg = data.json_file_saved 
+                ? `<div style="background: #d4edda; color: #155724; padding: 12px; border-radius: 6px; margin-bottom: 15px; border-left: 4px solid #28a745;">
+                    <strong>✓ JSON file saved:</strong> ${escapeHtml(data.json_file_saved)} (in project root directory)
+                   </div>`
+                : '';
+            projectInfo.innerHTML = `
+                <h2>Project Information</h2>
+                ${savedFileMsg}
+                <div class="project-info-grid">
+                    <div class="info-item">
+                        <strong>Project Name</strong>
+                        <span>${escapeHtml(info.name)}</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Project ID</strong>
+                        <span>${escapeHtml(info.project_id)}</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Created By</strong>
+                        <span>${escapeHtml(info.created_by)}</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Group Address Style</strong>
+                        <span>${escapeHtml(info.group_address_style)}</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Total Devices</strong>
+                        <span>${data.total_devices}</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Total Group Addresses</strong>
+                        <span>${data.total_group_addresses}</span>
+                    </div>
+                </div>
+            `;
+
+            // Display devices
+            if (data.devices.length === 0) {
+                devicesContainer.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📭</div>
+                        <h3>No devices found</h3>
+                        <p>The project file doesn't contain any devices.</p>
+                    </div>
+                `;
+            } else {
+                devicesContainer.innerHTML = '<h2 style="margin-bottom: 20px; color: #667eea;">Devices and Group Addresses</h2>';
+                data.devices.forEach(device => {
+                    const deviceCard = createDeviceCard(device);
+                    devicesContainer.appendChild(deviceCard);
+                });
+            }
+
+            resultsSection.classList.add('active');
+            
+            // Show JSON button if full JSON is available
+            if (fullJsonData) {
+                showJsonBtn.style.display = 'inline-block';
+            }
+        }
+
+        function createDeviceCard(device) {
+            const card = document.createElement('div');
+            card.className = 'device-card';
+
+            const hasGroupObjects = device.group_objects && device.group_objects.length > 0;
+            const totalGroupObjects = hasGroupObjects ? device.group_objects.length : 0;
+
+            card.innerHTML = `
+                <div class="device-header ${hasGroupObjects ? '' : 'expanded'}" onclick="toggleDevice(this)">
+                    <div>
+                        <h3>${escapeHtml(device.name || device.hardware_name || 'Unnamed Device')}</h3>
+                        <div style="font-size: 0.9em; opacity: 0.9; margin-top: 5px;">
+                            ${device.individual_address} • ${totalGroupObjects} Group Object(s)
+                        </div>
+                    </div>
+                    <span class="toggle">▼</span>
+                </div>
+                <div class="device-body ${hasGroupObjects ? '' : 'expanded'}">
+                    <div class="device-details">
+                        <div class="detail-item">
+                            <strong>Individual Address</strong>
+                            <span>${escapeHtml(device.individual_address)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Hardware Name</strong>
+                            <span>${escapeHtml(device.hardware_name || 'N/A')}</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Manufacturer</strong>
+                            <span>${escapeHtml(device.manufacturer || 'N/A')}</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Description</strong>
+                            <span>${escapeHtml(device.description || 'N/A')}</span>
+                        </div>
+                    </div>
+                    ${hasGroupObjects ? createGroupObjectsTableHTML(device.group_objects) : '<p style="color: #666; text-align: center; padding: 20px;">No group objects found for this device.</p>'}
+                </div>
+            `;
+
+            return card;
+        }
+
+        function createGroupObjectsTableHTML(groupObjects) {
+            if (!groupObjects || groupObjects.length === 0) {
+                return '<p style="color: #666; text-align: center; padding: 20px;">No group objects found.</p>';
+            }
+
+            return `
+                <table class="group-addresses-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 70px;">Number</th>
+                            <th>Name</th>
+                            <th>Object Function</th>
+                            <th>Linked with</th>
+                            <th style="width: 120px;">Group Addresses</th>
+                            <th style="width: 100px;">Length</th>
+                            <th style="width: 80px;">C, R, W</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${groupObjects.map((obj) => {
+                            return `
+                                <tr>
+                                    <td class="ga-id">${obj.number}</td>
+                                    <td class="ga-name">${escapeHtml(obj.name)}</td>
+                                    <td class="ga-type">${escapeHtml(obj.object_function)}</td>
+                                    <td class="ga-type">${escapeHtml(obj.linked_with)}</td>
+                                    <td class="ga-address">${escapeHtml(obj.group_addresses || '-')}</td>
+                                    <td class="ga-data-type">${escapeHtml(obj.length)}</td>
+                                    <td class="ga-flags">${escapeHtml(obj.flags)}</td>
+                                </tr>
+                            `;
+                        }).join('')}
+                    </tbody>
+                </table>
+            `;
+        }
+
+        function toggleDevice(header) {
+            const body = header.nextElementSibling;
+            header.classList.toggle('expanded');
+            body.classList.toggle('expanded');
+        }
+
+        function escapeHtml(text) {
+            if (text === null || text === undefined) return 'N/A';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function toggleJsonViewer() {
+            if (jsonViewerSection.classList.contains('hidden')) {
+                if (fullJsonData) {
+                    // Format and display JSON
+                    jsonContent.textContent = JSON.stringify(fullJsonData, null, 2);
+                    jsonViewerSection.classList.remove('hidden');
+                    showJsonBtn.style.display = 'none';
+                }
+            } else {
+                jsonViewerSection.classList.add('hidden');
+                showJsonBtn.style.display = 'inline-block';
+            }
+        }
+
+        function copyJson() {
+            if (fullJsonData) {
+                const jsonString = JSON.stringify(fullJsonData, null, 2);
+                navigator.clipboard.writeText(jsonString).then(() => {
+                    alert('JSON copied to clipboard!');
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                    // Fallback for older browsers
+                    const textarea = document.createElement('textarea');
+                    textarea.value = jsonString;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    alert('JSON copied to clipboard!');
+                });
+            }
+        }
+
+        function downloadJson() {
+            if (fullJsonData) {
+                const jsonString = JSON.stringify(fullJsonData, null, 2);
+                const blob = new Blob([jsonString], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'knx_project_output.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+        }
+    </script>
+</body>
+</html>
+

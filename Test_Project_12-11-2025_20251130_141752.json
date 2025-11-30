@@ -1,0 +1,5718 @@
+{
+  "project_info": {
+    "project_id": "P-0033",
+    "name": "Test Project 12-11-2025",
+    "last_modified": "2025-11-12T12:58:41.9796591Z",
+    "group_address_style": "ThreeLevel",
+    "guid": "dda38e9d-5732-45b9-83cf-eba3a2a1c1ef",
+    "created_by": "ETS6",
+    "schema_version": "23",
+    "tool_version": "6.3.8272.0",
+    "xknxproject_version": "3.8.2",
+    "language_code": null
+  },
+  "devices": [
+    {
+      "device_id": "1.1.111",
+      "name": "Panel Interface",
+      "hardware_name": "Panel Interface",
+      "individual_address": "1.1.111",
+      "manufacturer": "Guangzhou SeaWin Electrical Technologies Co., Ltd.",
+      "description": "",
+      "group_objects": [],
+      "total_group_objects": 0
+    },
+    {
+      "device_id": "1.1.112",
+      "name": "DG/S1.64.5.1 DALI Gateway,Premium,1f,MDRC",
+      "hardware_name": "DG/S1.64.5.1 DALI Gateway,Premium,1f,MDRC",
+      "individual_address": "1.1.112",
+      "manufacturer": "ABB AG (Stotz - Kontakt)",
+      "description": "",
+      "group_objects": [
+        {
+          "number": 10,
+          "name": "A-Schalten",
+          "object_function": "Switch",
+          "linked_with": "Switch",
+          "group_addresses": [
+            {
+              "address": "1/1/1",
+              "name": "New group address",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-10_R-12"
+        },
+        {
+          "number": 11,
+          "name": "A-Status Schalten",
+          "object_function": "Status Switch",
+          "linked_with": "Status Switch",
+          "group_addresses": [
+            {
+              "address": "1/1/2",
+              "name": "New group address",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-11_R-13"
+        },
+        {
+          "number": 13,
+          "name": "A-Relativ Dimmen",
+          "object_function": "Relative dimming",
+          "linked_with": "Relative dimming",
+          "group_addresses": [
+            {
+              "address": "1/1/3",
+              "name": "New group address",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-13_R-15"
+        },
+        {
+          "number": 14,
+          "name": "A-Helligkeitswert",
+          "object_function": "Brightness value",
+          "linked_with": "Brightness value",
+          "group_addresses": [
+            {
+              "address": "1/1/4",
+              "name": "New group address",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-14_R-16"
+        },
+        {
+          "number": 15,
+          "name": "A-Status Helligkeitswert",
+          "object_function": "Status Brightness value",
+          "linked_with": "Status Brightness value",
+          "group_addresses": [
+            {
+              "address": "1/1/5",
+              "name": "New group address",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-15_R-17"
+        },
+        {
+          "number": 16,
+          "name": "A-Farbtemperatur",
+          "object_function": "Set color temperature (K)",
+          "linked_with": "Set color temperature (K)",
+          "group_addresses": [
+            {
+              "address": "1/1/6",
+              "name": "New group address",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-16_R-1609"
+        },
+        {
+          "number": 19,
+          "name": "A-Status Farbtemperatur adr",
+          "object_function": "Status Color temperature addressed",
+          "linked_with": "Status Color temperature addressed",
+          "group_addresses": [
+            {
+              "address": "1/1/7",
+              "name": "New group address",
+              "dpt": null,
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": true,
+            "T": true,
+            "U": false
+          },
+          "dpt": null,
+          "communication_object_id": "1.1.112/O-19_R-1625"
+        },
+        {
+          "number": 83,
+          "name": "A-G1 Schalten",
+          "object_function": "Switch",
+          "linked_with": "Switch",
+          "group_addresses": [
+            {
+              "address": "2/0/1",
+              "name": "Switching 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-83_R-54"
+        },
+        {
+          "number": 84,
+          "name": "A-G1 Status Schalten",
+          "object_function": "Status Switch",
+          "linked_with": "Status Switch",
+          "group_addresses": [
+            {
+              "address": "2/1/1",
+              "name": "Switching Status",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-84_R-55"
+        },
+        {
+          "number": 85,
+          "name": "A-G1 Relativ Dimmen",
+          "object_function": "Relative dimming",
+          "linked_with": "Relative dimming",
+          "group_addresses": [
+            {
+              "address": "2/2/1",
+              "name": "Relative Dimming",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-85_R-56"
+        },
+        {
+          "number": 86,
+          "name": "A-G1 Helligkeitswert",
+          "object_function": "Brightness value",
+          "linked_with": "Brightness value",
+          "group_addresses": [
+            {
+              "address": "2/3/1",
+              "name": "Brightness Value",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-86_R-57"
+        },
+        {
+          "number": 87,
+          "name": "A-G1 Status Helligkeitswert",
+          "object_function": "Status Brightness value",
+          "linked_with": "Status Brightness value",
+          "group_addresses": [
+            {
+              "address": "2/4/1",
+              "name": "Status Brightness Value",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-87_R-58"
+        },
+        {
+          "number": 91,
+          "name": "A-G1 Farbtemperatur RSC",
+          "object_function": "Dim color temperature",
+          "linked_with": "Dim color temperature",
+          "group_addresses": [
+            {
+              "address": "2/7/1",
+              "name": "Dim Color Temperature",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-91_R-94"
+        },
+        {
+          "number": 92,
+          "name": "A-G1 Farbtemperatur ASC",
+          "object_function": "Set color temperature (K)",
+          "linked_with": "Set color temperature (K)",
+          "group_addresses": [
+            {
+              "address": "2/5/1",
+              "name": "Set Color Temperature",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-92_R-99"
+        },
+        {
+          "number": 97,
+          "name": "A-G1 Status Farbtemperatur",
+          "object_function": "Color temperature status",
+          "linked_with": "Color temperature status",
+          "group_addresses": [
+            {
+              "address": "2/6/1",
+              "name": "Status Color Temperature",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-97_R-221"
+        },
+        {
+          "number": 105,
+          "name": "A-G2 Schalten",
+          "object_function": "Switch",
+          "linked_with": "Switch",
+          "group_addresses": [
+            {
+              "address": "2/0/2",
+              "name": "Switching 2",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-105_R-239"
+        },
+        {
+          "number": 106,
+          "name": "A-G2 Status Schalten",
+          "object_function": "Status Switch",
+          "linked_with": "Status Switch",
+          "group_addresses": [
+            {
+              "address": "2/1/2",
+              "name": "Switching Status",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-106_R-241"
+        },
+        {
+          "number": 107,
+          "name": "A-G2 Relativ Dimmen",
+          "object_function": "Relative dimming",
+          "linked_with": "Relative dimming",
+          "group_addresses": [
+            {
+              "address": "2/2/2",
+              "name": "Relative Dimming",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-107_R-237"
+        },
+        {
+          "number": 108,
+          "name": "A-G2 Helligkeitswert",
+          "object_function": "Brightness value",
+          "linked_with": "Brightness value",
+          "group_addresses": [
+            {
+              "address": "2/3/2",
+              "name": "Brightness Value",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-108_R-238"
+        },
+        {
+          "number": 109,
+          "name": "A-G2 Status Helligkeitswert",
+          "object_function": "Status Brightness value",
+          "linked_with": "Status Brightness value",
+          "group_addresses": [
+            {
+              "address": "2/4/2",
+              "name": "Status Brightness Value",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-109_R-242"
+        },
+        {
+          "number": 113,
+          "name": "A-G2 Farbtemperatur RSC",
+          "object_function": "Dim color temperature",
+          "linked_with": "Dim color temperature",
+          "group_addresses": [
+            {
+              "address": "2/7/2",
+              "name": "Dim Color Temperature",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-113_R-263"
+        },
+        {
+          "number": 114,
+          "name": "A-G2 Farbtemperatur ASC",
+          "object_function": "Set color temperature (K)",
+          "linked_with": "Set color temperature (K)",
+          "group_addresses": [
+            {
+              "address": "2/5/2",
+              "name": "Set Color Temperature",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-114_R-257"
+        },
+        {
+          "number": 119,
+          "name": "A-G2 Status Farbtemperatur",
+          "object_function": "Color temperature status",
+          "linked_with": "Color temperature status",
+          "group_addresses": [
+            {
+              "address": "2/6/2",
+              "name": "Status Color Temperature",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-119_R-259"
+        },
+        {
+          "number": 127,
+          "name": "A-G3 Schalten",
+          "object_function": "Switch",
+          "linked_with": "Switch",
+          "group_addresses": [
+            {
+              "address": "2/0/3",
+              "name": "Switching",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-127_R-298"
+        },
+        {
+          "number": 128,
+          "name": "A-G3 Status Schalten",
+          "object_function": "Status Switch",
+          "linked_with": "Status Switch",
+          "group_addresses": [
+            {
+              "address": "2/1/3",
+              "name": "Switching Status",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-128_R-300"
+        },
+        {
+          "number": 129,
+          "name": "A-G3 Relativ Dimmen",
+          "object_function": "Relative dimming",
+          "linked_with": "Relative dimming",
+          "group_addresses": [
+            {
+              "address": "2/2/3",
+              "name": "Relative Dimming",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-129_R-296"
+        },
+        {
+          "number": 130,
+          "name": "A-G3 Helligkeitswert",
+          "object_function": "Brightness value",
+          "linked_with": "Brightness value",
+          "group_addresses": [
+            {
+              "address": "2/3/3",
+              "name": "Brightness Value",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-130_R-297"
+        },
+        {
+          "number": 131,
+          "name": "A-G3 Status Helligkeitswert",
+          "object_function": "Status Brightness value",
+          "linked_with": "Status Brightness value",
+          "group_addresses": [
+            {
+              "address": "2/4/3",
+              "name": "Status Brightness Value",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-131_R-301"
+        },
+        {
+          "number": 135,
+          "name": "A-G3 Farbtemperatur RSC",
+          "object_function": "Dim color temperature",
+          "linked_with": "Dim color temperature",
+          "group_addresses": [
+            {
+              "address": "2/7/3",
+              "name": "Dim Color Temperature",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-135_R-322"
+        },
+        {
+          "number": 136,
+          "name": "A-G3 Farbtemperatur ASC",
+          "object_function": "Set color temperature (K)",
+          "linked_with": "Set color temperature (K)",
+          "group_addresses": [
+            {
+              "address": "2/5/3",
+              "name": "Set Color Temperature",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-136_R-316"
+        },
+        {
+          "number": 141,
+          "name": "A-G3 Status Farbtemperatur",
+          "object_function": "Color temperature status",
+          "linked_with": "Color temperature status",
+          "group_addresses": [
+            {
+              "address": "2/6/3",
+              "name": "Status Color Temperature",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-141_R-318"
+        },
+        {
+          "number": 149,
+          "name": "A-G4 Schalten",
+          "object_function": "Switch",
+          "linked_with": "Switch",
+          "group_addresses": [
+            {
+              "address": "2/0/4",
+              "name": "Switching",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-149_R-357"
+        },
+        {
+          "number": 150,
+          "name": "A-G4 Status Schalten",
+          "object_function": "Status Switch",
+          "linked_with": "Status Switch",
+          "group_addresses": [
+            {
+              "address": "2/1/4",
+              "name": "Switching Status",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-150_R-359"
+        },
+        {
+          "number": 151,
+          "name": "A-G4 Relativ Dimmen",
+          "object_function": "Relative dimming",
+          "linked_with": "Relative dimming",
+          "group_addresses": [
+            {
+              "address": "2/2/4",
+              "name": "Relative Dimming",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-151_R-355"
+        },
+        {
+          "number": 152,
+          "name": "A-G4 Helligkeitswert",
+          "object_function": "Brightness value",
+          "linked_with": "Brightness value",
+          "group_addresses": [
+            {
+              "address": "2/3/4",
+              "name": "Brightness Value",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-152_R-356"
+        },
+        {
+          "number": 153,
+          "name": "A-G4 Status Helligkeitswert",
+          "object_function": "Status Brightness value",
+          "linked_with": "Status Brightness value",
+          "group_addresses": [
+            {
+              "address": "2/4/4",
+              "name": "Status Brightness Value",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-153_R-360"
+        },
+        {
+          "number": 157,
+          "name": "A-G4 Farbtemperatur RSC",
+          "object_function": "Dim color temperature",
+          "linked_with": "Dim color temperature",
+          "group_addresses": [
+            {
+              "address": "2/7/4",
+              "name": "Dim Color Temperature",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-157_R-381"
+        },
+        {
+          "number": 158,
+          "name": "A-G4 Farbtemperatur ASC",
+          "object_function": "Set color temperature (K)",
+          "linked_with": "Set color temperature (K)",
+          "group_addresses": [
+            {
+              "address": "2/5/4",
+              "name": "Set Color Temperature",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-158_R-375"
+        },
+        {
+          "number": 163,
+          "name": "A-G4 Status Farbtemperatur",
+          "object_function": "Color temperature status",
+          "linked_with": "Color temperature status",
+          "group_addresses": [
+            {
+              "address": "2/6/4",
+              "name": "Status Color Temperature",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-163_R-377"
+        },
+        {
+          "number": 171,
+          "name": "A-G5 Schalten",
+          "object_function": "Switch",
+          "linked_with": "Switch",
+          "group_addresses": [
+            {
+              "address": "2/0/5",
+              "name": "Switching",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-171_R-416"
+        },
+        {
+          "number": 172,
+          "name": "A-G5 Status Schalten",
+          "object_function": "Status Switch",
+          "linked_with": "Status Switch",
+          "group_addresses": [
+            {
+              "address": "2/1/5",
+              "name": "Switching Status",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.112/O-172_R-418"
+        },
+        {
+          "number": 173,
+          "name": "A-G5 Relativ Dimmen",
+          "object_function": "Relative dimming",
+          "linked_with": "Relative dimming",
+          "group_addresses": [
+            {
+              "address": "2/2/5",
+              "name": "Relative Dimming",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-173_R-414"
+        },
+        {
+          "number": 174,
+          "name": "A-G5 Helligkeitswert",
+          "object_function": "Brightness value",
+          "linked_with": "Brightness value",
+          "group_addresses": [
+            {
+              "address": "2/3/5",
+              "name": "Brightness Value",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-174_R-415"
+        },
+        {
+          "number": 175,
+          "name": "A-G5 Status Helligkeitswert",
+          "object_function": "Status Brightness value",
+          "linked_with": "Status Brightness value",
+          "group_addresses": [
+            {
+              "address": "2/4/5",
+              "name": "Status Brightness Value",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.112/O-175_R-419"
+        },
+        {
+          "number": 179,
+          "name": "A-G5 Farbtemperatur RSC",
+          "object_function": "Dim color temperature",
+          "linked_with": "Dim color temperature",
+          "group_addresses": [
+            {
+              "address": "2/7/5",
+              "name": "Dim Color Temperature",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.112/O-179_R-440"
+        },
+        {
+          "number": 180,
+          "name": "A-G5 Farbtemperatur ASC",
+          "object_function": "Set color temperature (K)",
+          "linked_with": "Set color temperature (K)",
+          "group_addresses": [
+            {
+              "address": "2/5/5",
+              "name": "Set Color Temperature",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-180_R-434"
+        },
+        {
+          "number": 185,
+          "name": "A-G5 Status Farbtemperatur",
+          "object_function": "Color temperature status",
+          "linked_with": "Color temperature status",
+          "group_addresses": [
+            {
+              "address": "2/6/5",
+              "name": "Status Color Temperature",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.112/O-185_R-436"
+        }
+      ],
+      "total_group_objects": 47
+    },
+    {
+      "device_id": "1.1.115",
+      "name": "KNX push-btn.8key",
+      "hardware_name": "KNX push-btn.8key",
+      "individual_address": "1.1.115",
+      "manufacturer": "Schneider Electric Industries SAS",
+      "description": "",
+      "group_objects": [
+        {
+          "number": 1,
+          "name": "Switching",
+          "object_function": "Switching",
+          "linked_with": "Switching",
+          "group_addresses": [
+            {
+              "address": "2/0/1",
+              "name": "Switching 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": true,
+            "U": true
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.115/O-1_R-70"
+        }
+      ],
+      "total_group_objects": 1
+    },
+    {
+      "device_id": "1.1.50",
+      "name": "DALI Control 2x64 Gateway",
+      "hardware_name": "DALI Control 2x64 Gateway",
+      "individual_address": "1.1.50",
+      "manufacturer": "MDT technologies",
+      "description": "",
+      "group_objects": [
+        {
+          "number": 71,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "6/0/1",
+              "name": "Switch Tunable Light 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-1_O-2-0_R-11"
+        },
+        {
+          "number": 72,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "6/2/1",
+              "name": "Relative Dimming Tunable Light 1",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-1_O-2-1_R-12"
+        },
+        {
+          "number": 73,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "6/3/1",
+              "name": "Brightness Value Tunable Light 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-1_O-2-2_R-15"
+        },
+        {
+          "number": 76,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "6/1/1",
+              "name": "Switch Status Tunable Light 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-1_O-2-5_R-13"
+        },
+        {
+          "number": 77,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "6/4/1",
+              "name": "Status Brightness Tunable Light 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-1_O-2-6_R-14"
+        },
+        {
+          "number": 81,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "6/5/1",
+              "name": "Set Color Temperature Tunable Light 1",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-1_O-2-10_R-26"
+        },
+        {
+          "number": 86,
+          "name": "Group 1, Colour R Fading",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "6/7/1",
+              "name": "Dim Color Temperature Tunable Light 1",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-1_O-2-15_R-28"
+        },
+        {
+          "number": 90,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "6/6/1",
+              "name": "Status Color Temperature Tunable Light 1",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-1_O-2-19_R-27"
+        },
+        {
+          "number": 99,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "6/0/2",
+              "name": "Switch Tunable Light 2",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-2_O-2-0_R-11"
+        },
+        {
+          "number": 100,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "6/2/2",
+              "name": "Relative Dimming Tunable Light 2",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-2_O-2-1_R-12"
+        },
+        {
+          "number": 101,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "6/3/2",
+              "name": "Brightness Value Tunable Light 2",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-2_O-2-2_R-15"
+        },
+        {
+          "number": 104,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "6/1/2",
+              "name": "Switch Status Tunable Light 2",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-2_O-2-5_R-13"
+        },
+        {
+          "number": 105,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "6/4/2",
+              "name": "Status Brightness Tunable Light 2",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-2_O-2-6_R-14"
+        },
+        {
+          "number": 109,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "6/5/2",
+              "name": "Set Color Temperature Tunable Light 2",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-2_O-2-10_R-26"
+        },
+        {
+          "number": 114,
+          "name": "Group 1, Colour R Fading",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "6/7/2",
+              "name": "Dim Color Temperature Tunable Light 2",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-2_O-2-15_R-28"
+        },
+        {
+          "number": 118,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "6/6/2",
+              "name": "Status Color Temperature Tunable Light 2",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-2_O-2-19_R-27"
+        },
+        {
+          "number": 127,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "6/0/3",
+              "name": "Switch Tunable Light 3",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-3_O-2-0_R-11"
+        },
+        {
+          "number": 128,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "6/2/3",
+              "name": "Relative Dimming Tunable Light 3",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-3_O-2-1_R-12"
+        },
+        {
+          "number": 129,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "6/3/3",
+              "name": "Brightness Value Tunable Light 3",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-3_O-2-2_R-15"
+        },
+        {
+          "number": 132,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "6/1/3",
+              "name": "Switch Status Tunable Light 3",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-3_O-2-5_R-13"
+        },
+        {
+          "number": 133,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "6/4/3",
+              "name": "Status Brightness Tunable Light 3",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-3_O-2-6_R-14"
+        },
+        {
+          "number": 137,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "6/5/3",
+              "name": "Set Color Temperature Tunable Light 3",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-3_O-2-10_R-26"
+        },
+        {
+          "number": 142,
+          "name": "Group 1, Colour R Fading",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "6/7/3",
+              "name": "Dim Color Temperature Tunable Light 3",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-3_O-2-15_R-28"
+        },
+        {
+          "number": 146,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "6/6/3",
+              "name": "Status Color Temperature Tunable Light 3",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-3_O-2-19_R-27"
+        },
+        {
+          "number": 155,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "6/0/4",
+              "name": "Switch Tunable Light 4",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-4_O-2-0_R-11"
+        },
+        {
+          "number": 156,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "6/2/4",
+              "name": "Relative Dimming Tunable Light 4",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-4_O-2-1_R-12"
+        },
+        {
+          "number": 157,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "6/3/4",
+              "name": "Brightness Value Tunable Light 4",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-4_O-2-2_R-15"
+        },
+        {
+          "number": 160,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "6/1/4",
+              "name": "Switch Status Tunable Light 4",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-4_O-2-5_R-13"
+        },
+        {
+          "number": 161,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "6/4/4",
+              "name": "Status Brightness Tunable Light 4",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-4_O-2-6_R-14"
+        },
+        {
+          "number": 165,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "6/5/4",
+              "name": "Set Color Temperature Tunable Light 4",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-4_O-2-10_R-26"
+        },
+        {
+          "number": 170,
+          "name": "Group 1, Colour R Fading",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "6/7/4",
+              "name": "Dim Color Temperature Tunable Light 4",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-4_O-2-15_R-28"
+        },
+        {
+          "number": 174,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "6/6/4",
+              "name": "Status Color Temperature Tunable Light 4",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-4_O-2-19_R-27"
+        },
+        {
+          "number": 183,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "6/0/5",
+              "name": "Switch Tunable Light 5",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-5_O-2-0_R-11"
+        },
+        {
+          "number": 184,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "6/2/5",
+              "name": "Relative Dimming Tunable Light 5",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-5_O-2-1_R-12"
+        },
+        {
+          "number": 185,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "6/3/5",
+              "name": "Brightness Value Tunable Light 5",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-5_O-2-2_R-15"
+        },
+        {
+          "number": 188,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "6/1/5",
+              "name": "Switch Status Tunable Light 5",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-5_O-2-5_R-13"
+        },
+        {
+          "number": 189,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "6/4/5",
+              "name": "Status Brightness Tunable Light 5",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-5_O-2-6_R-14"
+        },
+        {
+          "number": 193,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "6/5/5",
+              "name": "Set Color Temperature Tunable Light 5",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-5_O-2-10_R-26"
+        },
+        {
+          "number": 198,
+          "name": "Group 1, Colour R Fading",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "6/7/5",
+              "name": "Dim Color Temperature Tunable Light 5",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-5_O-2-15_R-28"
+        },
+        {
+          "number": 202,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "6/6/5",
+              "name": "Status Color Temperature Tunable Light 5",
+              "dpt": {
+                "main": 7,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "7.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-5_O-2-19_R-27"
+        },
+        {
+          "number": 211,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "3/0/1",
+              "name": "Switch RGB 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-6_O-2-0_R-11"
+        },
+        {
+          "number": 212,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "3/6/0",
+              "name": "RGB Relative Dimming 1",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-6_O-2-1_R-12"
+        },
+        {
+          "number": 213,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "3/4/1",
+              "name": "RGB Brighness Value 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-6_O-2-2_R-15"
+        },
+        {
+          "number": 216,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "3/1/1",
+              "name": "Switch Status RGB 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-6_O-2-5_R-13"
+        },
+        {
+          "number": 217,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "3/5/1",
+              "name": "RGB Status Brightness Value 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-6_O-2-6_R-14"
+        },
+        {
+          "number": 221,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Colour setting",
+          "linked_with": "Colour setting",
+          "group_addresses": [
+            {
+              "address": "3/2/1",
+              "name": "RGB Combined 1",
+              "dpt": {
+                "main": 232,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "232.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-6_O-2-10_R-57"
+        },
+        {
+          "number": 230,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "3/3/1",
+              "name": "RGB Combined Status 1",
+              "dpt": {
+                "main": 232,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "232.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-6_O-2-19_R-56"
+        },
+        {
+          "number": 239,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "3/0/2",
+              "name": "Switch RGB 2",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-7_O-2-0_R-11"
+        },
+        {
+          "number": 240,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "3/6/1",
+              "name": "RGB Relative Dimming 2",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-7_O-2-1_R-12"
+        },
+        {
+          "number": 241,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "3/4/2",
+              "name": "RGB Brighness Value 2",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-7_O-2-2_R-15"
+        },
+        {
+          "number": 244,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "3/1/2",
+              "name": "Switch Status RGB 2",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-7_O-2-5_R-13"
+        },
+        {
+          "number": 245,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "3/5/2",
+              "name": "RGB Status Brightness Value 2",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-7_O-2-6_R-14"
+        },
+        {
+          "number": 249,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Colour setting",
+          "linked_with": "Colour setting",
+          "group_addresses": [
+            {
+              "address": "3/2/2",
+              "name": "RGB Combined 2",
+              "dpt": {
+                "main": 232,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "232.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-7_O-2-10_R-57"
+        },
+        {
+          "number": 258,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "3/3/2",
+              "name": "RGB Combined Status 2",
+              "dpt": {
+                "main": 232,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "232.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-7_O-2-19_R-56"
+        },
+        {
+          "number": 267,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "3/0/3",
+              "name": "Switch RGB 3",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-8_O-2-0_R-11"
+        },
+        {
+          "number": 268,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "3/6/2",
+              "name": "RGB Relative Dimming 3",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-8_O-2-1_R-12"
+        },
+        {
+          "number": 269,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "3/4/3",
+              "name": "RGB Brighness Value 3",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-8_O-2-2_R-15"
+        },
+        {
+          "number": 272,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "3/1/3",
+              "name": "Switch Status RGB 3",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-8_O-2-5_R-13"
+        },
+        {
+          "number": 273,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "3/5/3",
+              "name": "RGB Status Brightness Value 3",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-8_O-2-6_R-14"
+        },
+        {
+          "number": 277,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Colour setting",
+          "linked_with": "Colour setting",
+          "group_addresses": [
+            {
+              "address": "3/2/3",
+              "name": "RGB Combined 3",
+              "dpt": {
+                "main": 232,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "232.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-8_O-2-10_R-57"
+        },
+        {
+          "number": 286,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "3/3/3",
+              "name": "RGB Combined Status 3",
+              "dpt": {
+                "main": 232,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "232.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-8_O-2-19_R-56"
+        },
+        {
+          "number": 295,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "3/0/4",
+              "name": "Switch RGB 4",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-9_O-2-0_R-11"
+        },
+        {
+          "number": 296,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "3/6/3",
+              "name": "RGB Relative Dimming 4",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-9_O-2-1_R-12"
+        },
+        {
+          "number": 297,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "3/4/4",
+              "name": "RGB Brighness Value 4",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-9_O-2-2_R-15"
+        },
+        {
+          "number": 300,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "3/1/4",
+              "name": "Switch Status RGB 4",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-9_O-2-5_R-13"
+        },
+        {
+          "number": 301,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "3/5/4",
+              "name": "RGB Status Brightness Value 4",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-9_O-2-6_R-14"
+        },
+        {
+          "number": 305,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Colour setting",
+          "linked_with": "Colour setting",
+          "group_addresses": [
+            {
+              "address": "3/2/4",
+              "name": "RGB Combined 4",
+              "dpt": {
+                "main": 232,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "232.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-9_O-2-10_R-57"
+        },
+        {
+          "number": 314,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "3/3/4",
+              "name": "RGB Combined Status 4",
+              "dpt": {
+                "main": 232,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "232.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-9_O-2-19_R-56"
+        },
+        {
+          "number": 323,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "3/0/5",
+              "name": "Switch RGB 5",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-10_O-2-0_R-11"
+        },
+        {
+          "number": 324,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "3/6/4",
+              "name": "RGB Relative Dimming 5",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-10_O-2-1_R-12"
+        },
+        {
+          "number": 325,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "3/4/5",
+              "name": "RGB Brighness Value 5",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-10_O-2-2_R-15"
+        },
+        {
+          "number": 328,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "3/1/5",
+              "name": "Switch Status RGB 5",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-10_O-2-5_R-13"
+        },
+        {
+          "number": 329,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "3/5/5",
+              "name": "RGB Status Brightness Value 5",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-10_O-2-6_R-14"
+        },
+        {
+          "number": 333,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Colour setting",
+          "linked_with": "Colour setting",
+          "group_addresses": [
+            {
+              "address": "3/2/5",
+              "name": "RGB Combined 5",
+              "dpt": {
+                "main": 232,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "232.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-10_O-2-10_R-57"
+        },
+        {
+          "number": 342,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "3/3/5",
+              "name": "RGB Combined Status 5",
+              "dpt": {
+                "main": 232,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "3 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "232.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-10_O-2-19_R-56"
+        },
+        {
+          "number": 351,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "4/0/1",
+              "name": "Switch RGBW 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-11_O-2-0_R-11"
+        },
+        {
+          "number": 352,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "4/6/0",
+              "name": "RGBW Relative Dimming 1",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-11_O-2-1_R-12"
+        },
+        {
+          "number": 353,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "4/4/1",
+              "name": "RGBW Brighness Value 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-11_O-2-2_R-15"
+        },
+        {
+          "number": 356,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "4/1/1",
+              "name": "Switch Status RGBW 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-11_O-2-5_R-13"
+        },
+        {
+          "number": 357,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "4/5/1",
+              "name": "RGBW Status Brightness Value 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-11_O-2-6_R-14"
+        },
+        {
+          "number": 361,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Colour setting",
+          "linked_with": "Colour setting",
+          "group_addresses": [
+            {
+              "address": "4/2/1",
+              "name": "RGBW Combined 1",
+              "dpt": {
+                "main": 251,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "6 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "251.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-11_O-2-10_R-36"
+        },
+        {
+          "number": 370,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "4/3/1",
+              "name": "RGBW Combined Status 1",
+              "dpt": {
+                "main": 251,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "6 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "251.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-11_O-2-19_R-37"
+        },
+        {
+          "number": 379,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "4/0/2",
+              "name": "Switch RGBW 2",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-12_O-2-0_R-11"
+        },
+        {
+          "number": 380,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "4/6/1",
+              "name": "RGBW Relative Dimming 2",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-12_O-2-1_R-12"
+        },
+        {
+          "number": 381,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "4/4/2",
+              "name": "RGBW Brighness Value 2",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-12_O-2-2_R-15"
+        },
+        {
+          "number": 384,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "4/1/2",
+              "name": "Switch Status RGBW 2",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-12_O-2-5_R-13"
+        },
+        {
+          "number": 385,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "4/5/2",
+              "name": "RGBW Status Brightness Value 2",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-12_O-2-6_R-14"
+        },
+        {
+          "number": 389,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Colour setting",
+          "linked_with": "Colour setting",
+          "group_addresses": [
+            {
+              "address": "4/2/2",
+              "name": "RGBW Combined 2",
+              "dpt": {
+                "main": 251,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "6 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "251.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-12_O-2-10_R-36"
+        },
+        {
+          "number": 398,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "4/3/2",
+              "name": "RGBW Combined Status 2",
+              "dpt": {
+                "main": 251,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "6 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "251.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-12_O-2-19_R-37"
+        },
+        {
+          "number": 407,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "4/0/3",
+              "name": "Switch RGBW 3",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-13_O-2-0_R-11"
+        },
+        {
+          "number": 408,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "4/6/2",
+              "name": "RGBW Relative Dimming 3",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-13_O-2-1_R-12"
+        },
+        {
+          "number": 409,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "4/4/3",
+              "name": "RGBW Brighness Value 3",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-13_O-2-2_R-15"
+        },
+        {
+          "number": 412,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "4/1/3",
+              "name": "Switch Status RGBW 3",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-13_O-2-5_R-13"
+        },
+        {
+          "number": 413,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "4/5/3",
+              "name": "RGBW Status Brightness Value 3",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-13_O-2-6_R-14"
+        },
+        {
+          "number": 417,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Colour setting",
+          "linked_with": "Colour setting",
+          "group_addresses": [
+            {
+              "address": "4/2/3",
+              "name": "RGBW Combined 3",
+              "dpt": {
+                "main": 251,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "6 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "251.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-13_O-2-10_R-36"
+        },
+        {
+          "number": 426,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "4/3/3",
+              "name": "RGBW Combined Status 3",
+              "dpt": {
+                "main": 251,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "6 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "251.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-13_O-2-19_R-37"
+        },
+        {
+          "number": 435,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "4/0/4",
+              "name": "Switch RGBW 4",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-14_O-2-0_R-11"
+        },
+        {
+          "number": 436,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "4/6/3",
+              "name": "RGBW Relative Dimming 4",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-14_O-2-1_R-12"
+        },
+        {
+          "number": 437,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "4/4/4",
+              "name": "RGBW Brighness Value 4",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-14_O-2-2_R-15"
+        },
+        {
+          "number": 440,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "4/1/4",
+              "name": "Switch Status RGBW 4",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-14_O-2-5_R-13"
+        },
+        {
+          "number": 441,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "4/5/4",
+              "name": "RGBW Status Brightness Value 4",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-14_O-2-6_R-14"
+        },
+        {
+          "number": 445,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Colour setting",
+          "linked_with": "Colour setting",
+          "group_addresses": [
+            {
+              "address": "4/2/4",
+              "name": "RGBW Combined 4",
+              "dpt": {
+                "main": 251,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "6 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "251.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-14_O-2-10_R-36"
+        },
+        {
+          "number": 454,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "4/3/4",
+              "name": "RGBW Combined Status 4",
+              "dpt": {
+                "main": 251,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "6 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "251.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-14_O-2-19_R-37"
+        },
+        {
+          "number": 463,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "4/0/5",
+              "name": "Switch RGBW 5",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-15_O-2-0_R-11"
+        },
+        {
+          "number": 464,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "4/6/4",
+              "name": "RGBW Relative Dimming 5",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-15_O-2-1_R-12"
+        },
+        {
+          "number": 465,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "4/4/5",
+              "name": "RGBW Brighness Value 5",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-15_O-2-2_R-15"
+        },
+        {
+          "number": 468,
+          "name": "Group 1, Status",
+          "object_function": "Status: ON/OFF",
+          "linked_with": "Status: ON/OFF",
+          "group_addresses": [
+            {
+              "address": "4/1/5",
+              "name": "Switch Status RGBW 5",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-15_O-2-5_R-13"
+        },
+        {
+          "number": 469,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "4/5/5",
+              "name": "RGBW Status Brightness Value 5",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-15_O-2-6_R-14"
+        },
+        {
+          "number": 473,
+          "name": "Group 1, Colour Control Value",
+          "object_function": "Colour setting",
+          "linked_with": "Colour setting",
+          "group_addresses": [
+            {
+              "address": "4/2/5",
+              "name": "RGBW Combined 5",
+              "dpt": {
+                "main": 251,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "6 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "251.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-15_O-2-10_R-36"
+        },
+        {
+          "number": 482,
+          "name": "Group 1, Colour Control Status",
+          "object_function": "Status",
+          "linked_with": "Status",
+          "group_addresses": [
+            {
+              "address": "4/3/5",
+              "name": "RGBW Combined Status 5",
+              "dpt": {
+                "main": 251,
+                "sub": 600
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "6 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "251.600",
+          "communication_object_id": "1.1.50/MD-1_M-2_MI-15_O-2-19_R-37"
+        },
+        {
+          "number": 1293,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "5/0/1",
+              "name": "Switch Dimmer Light 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-1_O-2-0_R-11"
+        },
+        {
+          "number": 1294,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "5/2/1",
+              "name": "Relative Dimming Dimmer Light 1",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-1_O-2-1_R-12"
+        },
+        {
+          "number": 1295,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "5/3/1",
+              "name": "Brightness Value Dimmer Light 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-1_O-2-2_R-15"
+        },
+        {
+          "number": 1298,
+          "name": "Group 1, Status",
+          "object_function": "Status: On/Off",
+          "linked_with": "Status: On/Off",
+          "group_addresses": [
+            {
+              "address": "5/1/1",
+              "name": "Switch Status Dimmer Light 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-1_O-2-5_R-13"
+        },
+        {
+          "number": 1299,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "5/4/1",
+              "name": "Status Brightness Dimmer Light 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-1_O-2-6_R-14"
+        },
+        {
+          "number": 1321,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "5/0/2",
+              "name": "Switch Dimmer Light 2",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-2_O-2-0_R-11"
+        },
+        {
+          "number": 1322,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "5/2/2",
+              "name": "Relative Dimming Dimmer Light 2",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-2_O-2-1_R-12"
+        },
+        {
+          "number": 1323,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "5/3/2",
+              "name": "Brightness Value Dimmer Light 2",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-2_O-2-2_R-15"
+        },
+        {
+          "number": 1326,
+          "name": "Group 1, Status",
+          "object_function": "Status: On/Off",
+          "linked_with": "Status: On/Off",
+          "group_addresses": [
+            {
+              "address": "5/1/2",
+              "name": "Switch Status Dimmer Light 2",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-2_O-2-5_R-13"
+        },
+        {
+          "number": 1327,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "5/4/2",
+              "name": "Status Brightness Dimmer Light 2",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-2_O-2-6_R-14"
+        },
+        {
+          "number": 1349,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "5/0/3",
+              "name": "Switch Dimmer Light 3",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-3_O-2-0_R-11"
+        },
+        {
+          "number": 1350,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "5/2/3",
+              "name": "Relative Dimming Dimmer Light 3",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-3_O-2-1_R-12"
+        },
+        {
+          "number": 1351,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "5/3/3",
+              "name": "Brightness Value Dimmer Light 3",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-3_O-2-2_R-15"
+        },
+        {
+          "number": 1354,
+          "name": "Group 1, Status",
+          "object_function": "Status: On/Off",
+          "linked_with": "Status: On/Off",
+          "group_addresses": [
+            {
+              "address": "5/1/3",
+              "name": "Switch Status Dimmer Light 3",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-3_O-2-5_R-13"
+        },
+        {
+          "number": 1355,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "5/4/3",
+              "name": "Status Brightness Dimmer Light 3",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-3_O-2-6_R-14"
+        },
+        {
+          "number": 1377,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "5/0/4",
+              "name": "Switch Dimmer Light 4",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-4_O-2-0_R-11"
+        },
+        {
+          "number": 1378,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "5/2/4",
+              "name": "Relative Dimming Dimmer Light 4",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-4_O-2-1_R-12"
+        },
+        {
+          "number": 1379,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "5/3/4",
+              "name": "Brightness Value Dimmer Light 4",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-4_O-2-2_R-15"
+        },
+        {
+          "number": 1382,
+          "name": "Group 1, Status",
+          "object_function": "Status: On/Off",
+          "linked_with": "Status: On/Off",
+          "group_addresses": [
+            {
+              "address": "5/1/4",
+              "name": "Switch Status Dimmer Light 4",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-4_O-2-5_R-13"
+        },
+        {
+          "number": 1383,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "5/4/4",
+              "name": "Status Brightness Dimmer Light 4",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-4_O-2-6_R-14"
+        },
+        {
+          "number": 1405,
+          "name": "Group 1, Switching",
+          "object_function": "ON/OFF",
+          "linked_with": "ON/OFF",
+          "group_addresses": [
+            {
+              "address": "5/0/5",
+              "name": "Switch Dimmer Light 5",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-5_O-2-0_R-11"
+        },
+        {
+          "number": 1406,
+          "name": "Group 1, Dimming",
+          "object_function": "Dimming relative",
+          "linked_with": "Dimming relative",
+          "group_addresses": [
+            {
+              "address": "5/2/5",
+              "name": "Relative Dimming Dimmer Light 5",
+              "dpt": {
+                "main": 3,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "4 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "3.7",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-5_O-2-1_R-12"
+        },
+        {
+          "number": 1407,
+          "name": "Group 1, Set Value",
+          "object_function": "Dimming absolute",
+          "linked_with": "Dimming absolute",
+          "group_addresses": [
+            {
+              "address": "5/3/5",
+              "name": "Brightness Value Dimmer Light 5",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-5_O-2-2_R-15"
+        },
+        {
+          "number": 1410,
+          "name": "Group 1, Status",
+          "object_function": "Status: On/Off",
+          "linked_with": "Status: On/Off",
+          "group_addresses": [
+            {
+              "address": "5/1/5",
+              "name": "Switch Status Dimmer Light 5",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-5_O-2-5_R-13"
+        },
+        {
+          "number": 1411,
+          "name": "Group 1, Status",
+          "object_function": "Value",
+          "linked_with": "Value",
+          "group_addresses": [
+            {
+              "address": "5/4/5",
+              "name": "Status Brightness Dimmer Light 5",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.50/MD-2_M-1_MI-5_O-2-6_R-14"
+        }
+      ],
+      "total_group_objects": 135
+    },
+    {
+      "device_id": "1.1.51",
+      "name": "AKU-0416.03 Universal Actuator 4-fold, 16A, 230VAC",
+      "hardware_name": "AKU-0416.03 Universal Actuator 4-fold, 16A, 230VAC",
+      "individual_address": "1.1.51",
+      "manufacturer": "MDT technologies",
+      "description": "",
+      "group_objects": [
+        {
+          "number": 31,
+          "name": "Mud(0)",
+          "object_function": "Shutter Up/Down",
+          "linked_with": "Shutter Up/Down",
+          "group_addresses": [
+            {
+              "address": "7/0/1",
+              "name": "Up/Down Shutter/Blind 1",
+              "dpt": {
+                "main": 1,
+                "sub": 8
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.8",
+          "communication_object_id": "1.1.51/MD-2_M-9_MI-1_O-2-31_R-3"
+        },
+        {
+          "number": 33,
+          "name": "Stop(0)",
+          "object_function": "Stop",
+          "linked_with": "Stop",
+          "group_addresses": [
+            {
+              "address": "7/1/1",
+              "name": "Stop Shutter/Blind 1",
+              "dpt": {
+                "main": 1,
+                "sub": 17
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.17",
+          "communication_object_id": "1.1.51/MD-2_M-9_MI-1_O-2-33_R-1"
+        },
+        {
+          "number": 38,
+          "name": "Sapbp(0)",
+          "object_function": "Absolute position",
+          "linked_with": "Absolute position",
+          "group_addresses": [
+            {
+              "address": "7/2/1",
+              "name": "Position Shutter/Blind 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.51/MD-2_M-9_MI-1_O-2-38_R-7"
+        },
+        {
+          "number": 40,
+          "name": "Capbp(0)",
+          "object_function": "Status current position",
+          "linked_with": "Status current position",
+          "group_addresses": [
+            {
+              "address": "7/3/1",
+              "name": "Status Position Shutter/Blind 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.51/MD-2_M-9_MI-1_O-2-40_R-9"
+        },
+        {
+          "number": 61,
+          "name": "Mud(0)",
+          "object_function": "Shutter Up/Down",
+          "linked_with": "Shutter Up/Down",
+          "group_addresses": [
+            {
+              "address": "7/0/2",
+              "name": "Up/Down Shutter/Blind 2",
+              "dpt": {
+                "main": 1,
+                "sub": 8
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.8",
+          "communication_object_id": "1.1.51/MD-2_M-12_MI-1_O-2-31_R-3"
+        },
+        {
+          "number": 63,
+          "name": "Stop(0)",
+          "object_function": "Stop",
+          "linked_with": "Stop",
+          "group_addresses": [
+            {
+              "address": "7/1/2",
+              "name": "Stop Shutter/Blind 2",
+              "dpt": {
+                "main": 1,
+                "sub": 17
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "1.17",
+          "communication_object_id": "1.1.51/MD-2_M-12_MI-1_O-2-33_R-1"
+        },
+        {
+          "number": 68,
+          "name": "Sapbp(0)",
+          "object_function": "Absolute position",
+          "linked_with": "Absolute position",
+          "group_addresses": [
+            {
+              "address": "7/2/2",
+              "name": "Position Shutter/Blind 2",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": false,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.51/MD-2_M-12_MI-1_O-2-38_R-7"
+        },
+        {
+          "number": 70,
+          "name": "Capbp(0)",
+          "object_function": "Status current position",
+          "linked_with": "Status current position",
+          "group_addresses": [
+            {
+              "address": "7/3/2",
+              "name": "Status Position Shutter/Blind 2",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.51/MD-2_M-12_MI-1_O-2-40_R-9"
+        }
+      ],
+      "total_group_objects": 8
+    },
+    {
+      "device_id": "1.1.52",
+      "name": "Panel Interface,TC0604",
+      "hardware_name": "Panel Interface,TC0604",
+      "individual_address": "1.1.52",
+      "manufacturer": "Guangzhou SeaWin Electrical Technologies Co., Ltd.",
+      "description": "",
+      "group_objects": [
+        {
+          "number": 121,
+          "name": "C0_120-Thermostat, Send actual temperature",
+          "object_function": "2 byte",
+          "linked_with": "2 byte",
+          "group_addresses": [
+            {
+              "address": "10/0/0",
+              "name": "Sensor 1",
+              "dpt": {
+                "main": 9,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "9.1",
+          "communication_object_id": "1.1.52/O-121_R-1783"
+        },
+        {
+          "number": 122,
+          "name": "C0_121-Thermostat, Send actual humidity",
+          "object_function": "2 byte",
+          "linked_with": "2 byte",
+          "group_addresses": [
+            {
+              "address": "11/1/1",
+              "name": "Sensor 1",
+              "dpt": {
+                "main": 9,
+                "sub": 7
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "9.7",
+          "communication_object_id": "1.1.52/O-122_R-1785"
+        },
+        {
+          "number": 133,
+          "name": "C0_132-Air conditioning, Switch",
+          "object_function": "On/Off-Output",
+          "linked_with": "On/Off-Output",
+          "group_addresses": [
+            {
+              "address": "8/0/1",
+              "name": "Thermostat Switch 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.52/O-133_R-133"
+        },
+        {
+          "number": 134,
+          "name": "C0_133-Air conditioning, Feedback switch",
+          "object_function": "On/Off-Input",
+          "linked_with": "On/Off-Input",
+          "group_addresses": [
+            {
+              "address": "8/1/1",
+              "name": "Thermostat Switch Feedback 1",
+              "dpt": {
+                "main": 1,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Bit",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": true,
+            "U": true
+          },
+          "dpt": "1.1",
+          "communication_object_id": "1.1.52/O-134_R-134"
+        },
+        {
+          "number": 135,
+          "name": "C0_134-Air conditioning, Operating mode",
+          "object_function": "1byte-Output",
+          "linked_with": "1byte-Output",
+          "group_addresses": [
+            {
+              "address": "8/2/1",
+              "name": "Thermostat Mode 1",
+              "dpt": {
+                "main": 20,
+                "sub": 105
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "20.105",
+          "communication_object_id": "1.1.52/O-135_R-135"
+        },
+        {
+          "number": 136,
+          "name": "C0_135-Air conditioning, Feedback operating mode",
+          "object_function": "1byte-Input",
+          "linked_with": "1byte-Input",
+          "group_addresses": [
+            {
+              "address": "8/3/1",
+              "name": "Thermostat Mode Feedback 1",
+              "dpt": {
+                "main": 20,
+                "sub": 105
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": true,
+            "U": true
+          },
+          "dpt": "20.105",
+          "communication_object_id": "1.1.52/O-136_R-136"
+        },
+        {
+          "number": 137,
+          "name": "C0_136-Air conditioning, Fan speed",
+          "object_function": "1byte-Output",
+          "linked_with": "1byte-Output",
+          "group_addresses": [
+            {
+              "address": "8/4/1",
+              "name": "Thermostat Fan Speed 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.52/O-137_R-137"
+        },
+        {
+          "number": 138,
+          "name": "C0_137-Air conditioning, Feedback fan speed",
+          "object_function": "1byte-Input",
+          "linked_with": "1byte-Input",
+          "group_addresses": [
+            {
+              "address": "8/5/1",
+              "name": "Thermostat Fan Feedback Speed 1",
+              "dpt": {
+                "main": 5,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "1 Byte",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": true,
+            "U": true
+          },
+          "dpt": "5.1",
+          "communication_object_id": "1.1.52/O-138_R-138"
+        },
+        {
+          "number": 139,
+          "name": "C0_138-Air conditioning, Setting temperature",
+          "object_function": "2byte-Output",
+          "linked_with": "2byte-Output",
+          "group_addresses": [
+            {
+              "address": "8/6/1",
+              "name": "Thermostat Set Temprature 1",
+              "dpt": {
+                "main": 9,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": true,
+            "W": false,
+            "T": true,
+            "U": false
+          },
+          "dpt": "9.1",
+          "communication_object_id": "1.1.52/O-139_R-139"
+        },
+        {
+          "number": 140,
+          "name": "C0_139-Air conditioning, Feedback Set temp",
+          "object_function": "2byte-Input",
+          "linked_with": "2byte-Input",
+          "group_addresses": [
+            {
+              "address": "8/7/1",
+              "name": "Thermostat Feedback Set Temprature 1",
+              "dpt": {
+                "main": 9,
+                "sub": 1
+              },
+              "description": "",
+              "comment": ""
+            }
+          ],
+          "length": "2 Bytes",
+          "flags": {
+            "C": true,
+            "R": false,
+            "W": true,
+            "T": true,
+            "U": true
+          },
+          "dpt": "9.1",
+          "communication_object_id": "1.1.52/O-140_R-140"
+        }
+      ],
+      "total_group_objects": 10
+    },
+    {
+      "device_id": "1.1.53",
+      "name": "Presence Detector Mini & R",
+      "hardware_name": "Presence Detector Mini & R",
+      "individual_address": "1.1.53",
+      "manufacturer": "Creatrol",
+      "description": "",
+      "group_objects": [],
+      "total_group_objects": 0
+    }
+  ],
+  "total_devices": 7,
+  "total_group_addresses": 637
+}
